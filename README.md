@@ -1,2 +1,0 @@
-# kumpulide
-Web ide broo
