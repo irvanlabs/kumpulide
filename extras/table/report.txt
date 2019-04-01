@@ -1,0 +1,5 @@
+id
+reported_idea
+user_reported_idea
+report_cat
+content_report

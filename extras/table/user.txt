@@ -1,0 +1,8 @@
+id
+username
+fullname
+email
+avatar
+password
+timestamp
+level

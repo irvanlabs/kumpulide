@@ -1,0 +1,9 @@
+id
+idea
+description
+picture
+category
+privacy
+voted
+licensed
+timestamp
