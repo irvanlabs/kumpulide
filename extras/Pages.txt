@@ -1,0 +1,25 @@
+login
+prefix: /login
+
+
+register
+prefix: /register
+
+ide deatail
+prefix: /idea/detail/{id}
+
+ide pagination
+prefix: /idea/next/2
+
+about
+prefix: /about
+
+contact
+prefix: /contact
+
+
+admin
+prefix:  /ngadmin
+
+user page
+prefix: /user/{username}
