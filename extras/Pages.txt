@@ -8,8 +8,10 @@ prefix: /register
 ide deatail
 prefix: /idea/detail/{id}
 
+
+# saran saja
 ide pagination
-prefix: /idea/next/2
+prefix: /idea/2
 
 about
 prefix: /about
@@ -17,9 +19,9 @@ prefix: /about
 contact
 prefix: /contact
 
-
+# saran > dijadikan private route
 admin
-prefix:  /ngadmin
+prefix:	/admin
 
 user page
 prefix: /user/{username}
