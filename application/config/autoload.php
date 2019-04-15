@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('clean_debug');
+$autoload['helper'] = array('clean_debug','is_req_meth');
 
 /*
 | -------------------------------------------------------------------
