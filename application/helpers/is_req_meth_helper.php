@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 if(!function_exists('is_req_meth')){
-	function is_req_meth($method = '', callable $true = null, callable $false = null){
+	function is_req_meth(string $method, callable $true = null, callable $false = null ){
 		if($_SERVER['REQUEST_METHOD'] == strtoupper($method)){
 			return (is_null($true)) ? true : call_user_func($true);
 		} else {
