@@ -92,6 +92,7 @@ $autoload['drivers'] = array();
 $autoload['helper'] = array('clean_debug',
 							'is_req_meth',
 							'captcha',
+							'string',
 							'form',
 							'url');
 

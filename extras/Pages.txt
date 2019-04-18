@@ -11,7 +11,7 @@ prefix: /idea/detail/{id}
 
 # saran saja
 ide pagination
-prefix: /idea/2
+prefix: /idea/{page}
 
 about
 prefix: /about

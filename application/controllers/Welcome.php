@@ -2,26 +2,36 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 class Welcome extends CI_Controller
 {
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     *         http://example.com/index.php/welcome
-     *    - or -
-     *         http://example.com/index.php/welcome/index
-     *    - or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see https://codeigniter.com/user_guide/general/urls.html
-     */
     public function index()
     {
         // $this->load->view('welcome_message');
-        $this->parser->set_delimiters('{{','}}');
-        $data["path"] = APPPATH;
-        $this->parser->parse('pages/login',$data);
+        echo APPPATH.'<hr>';
+        $rand = random_string('alnum', 8);
+        echo $rand.'<hr>';
+        echo FCPATH."<br>";
+        
+        $vals = array(
+	        'word'          => $rand,
+	        'img_path'      => FCPATH.'captcha/',
+	        'img_url'       => base_url('captcha'),
+	        'font_path'     => BASEPATH.'fonts/captcha.ttf',
+	        'img_width'     => 300,
+	        'img_height'    => 75,
+	        'expiration'    => 7200,
+	        'word_length'   => 16,
+	        'font_size'     => 64,
+	        'img_id'        => 'kumpulide_captcha',
+	        'pool'          => '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+	        
+	        'colors' => array(
+		        'background' => array(200,75,255),
+		        'border' => array(0,255,0),
+		        'text' => array(255,0,0),
+		        'grid' => array(0,0,200)
+		    )
+        );
+        $cap = create_captcha($vals);
+        echo clean_print($cap);
+        echo $cap["image"];
     }
 }
