@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('parser');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +89,11 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('clean_debug','is_req_meth');
+$autoload['helper'] = array('clean_debug',
+							'is_req_meth',
+							'captcha',
+							'form',
+							'url');
 
 /*
 | -------------------------------------------------------------------
