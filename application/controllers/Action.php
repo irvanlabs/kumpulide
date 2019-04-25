@@ -9,7 +9,6 @@ class Action extends CI_Controller
 	public function login()
 	{
 		$expiration = time() - 7200;
-		$this->db->where('captcha_time < ', $expiration)->delete('captcha');
 		$sql = 'SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?';
 		$binds = array($_POST['captcha'], $this->input->ip_address(), $expiration);
 		$query = $this->db->query($sql, $binds);
@@ -19,6 +18,7 @@ class Action extends CI_Controller
 		{
 			echo 'You must submit the word that appears in the image.';
 		}
+		$this->db->where(['captcha_time < ' => $expiration,'word' => $_POST['captcha']])->delete('captcha');
 		echo clean_print($_POST);
 	}
 }

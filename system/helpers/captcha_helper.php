@@ -317,25 +317,32 @@ if ( ! function_exists('create_captcha'))
 		//  Generate the image
 		// -----------------------------------
 		$img_url = rtrim($img_url, '/').'/';
-
+		ob_start();
 		if (function_exists('imagejpeg'))
 		{
 			$img_filename = $now.'.jpg';
-			imagejpeg($im, $img_path.$img_filename);
+			imagejpeg($im/*, $img_path.$img_filename*/);
 		}
 		elseif (function_exists('imagepng'))
 		{
 			$img_filename = $now.'.png';
-			imagepng($im, $img_path.$img_filename);
+			imagepng($im/*, $img_path.$img_filename*/);
 		}
 		else
 		{
 			return FALSE;
 		}
 
-		$img = '<img '.($img_id === '' ? '' : 'id="'.$img_id.'"').' src="'.$img_url.$img_filename.'" style="width: '.$img_width.'px; height: '.$img_height .'px; border: 0;" alt=" " />';
+		// $img = '<img '.($img_id === '' ? '' : 'id="'.$img_id.'"').' src="'.$img_url.$img_filename.'" style="width: '.$img_width.'px; height: '.$img_height .'px; border: 0;" alt=" " />';
 		ImageDestroy($im);
 
-		return array('word' => $word, 'time' => $now, 'image' => $img, 'filename' => $img_filename);
+		// return array('word' => $word, 'time' => $now, 'image' => $img, 'filename' => $img_filename);
+		$ret = [
+			'image' => base64_encode(ob_get_clean()),
+			'word' => $word,
+			'type' => pathinfo($img_filename,PATHINFO_EXTENSION),
+			'time' => $now
+		];
+		return $ret;
 	}
 }
