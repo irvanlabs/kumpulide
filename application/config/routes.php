@@ -52,10 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['[a-zA-Z]+']['get'] = 'pages/index/$1';
 
 $route['login']['get'] = 'user/login';
-$route['login']['post'] = 'action/login';
+$route['act/login']['post'] = 'action/login';
 
 $route['register']['get'] = 'user/register';
-$route['register']['post'] = 'action/register';
+$route['act/register']['post'] = 'action/register';
 
 $route['user/[a-zA-Z0-9]+']['get'] = 'user/dashboard/$1';
 
@@ -64,5 +64,5 @@ $route['admin'] = 'admin';
 $route['idea/detail/(:any)']['get'] = 'idea/detail/$1';
 
 $route['default_controller'] = 'welcome';
-$route['404_override'] = 'pages/not_found';
+$route['404_override'] = '';
 $route['translate_uri_dashes'] = true;

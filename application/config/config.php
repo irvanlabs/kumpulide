@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -93,7 +93,7 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = false;
 /*
 |--------------------------------------------------------------------------
 | Class Extension Prefix
@@ -127,7 +127,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = false;
 /*
 |--------------------------------------------------------------------------
 | Allowed URL Characters
@@ -171,7 +171,7 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 | use segment based URLs.
 |
 */
-$config['enable_query_strings'] = FALSE;
+$config['enable_query_strings'] = false;
 $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
@@ -187,7 +187,7 @@ $config['directory_trigger'] = 'd';
 |          for backwards compatibility purposes!
 |
 */
-$config['allow_get_array'] = TRUE;
+$config['allow_get_array'] = true;
 /*
 |--------------------------------------------------------------------------
 | Error Logging Threshold
@@ -291,7 +291,7 @@ $config['cache_path'] = '';
 |	             of query parameters.
 |
 */
-$config['cache_query_string'] = FALSE;
+$config['cache_query_string'] = false;
 /*
 |--------------------------------------------------------------------------
 | Encryption Key
@@ -359,9 +359,9 @@ $config['sess_driver'] = 'database';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
 $config['sess_save_path'] = 'sessions';
-$config['sess_match_ip'] = FALSE;
+$config['sess_match_ip'] = false;
 $config['sess_time_to_update'] = 300;
-$config['sess_regenerate_destroy'] = FALSE;
+$config['sess_regenerate_destroy'] = false;
 /*
 |--------------------------------------------------------------------------
 | Cookie Related Variables
@@ -394,7 +394,7 @@ $config['cookie_httponly'] 	= true;
 |          for backwards compatibility purposes!
 |
 */
-$config['standardize_newlines'] = FALSE;
+$config['standardize_newlines'] = false;
 /*
 |--------------------------------------------------------------------------
 | Global XSS Filtering
@@ -407,7 +407,7 @@ $config['standardize_newlines'] = FALSE;
 |          for backwards compatibility purposes!
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = false;
 /*
 |--------------------------------------------------------------------------
 | Cross Site Request Forgery
@@ -448,7 +448,7 @@ $config['csrf_exclude_uris'] = array();
 | by the output class.  Do not 'echo' any values with compression enabled.
 |
 */
-$config['compress_output'] = FALSE;
+$config['compress_output'] = false;
 /*
 |--------------------------------------------------------------------------
 | Master Time Reference
@@ -473,7 +473,7 @@ $config['time_reference'] = 'local';
 | Note: You need to have eval() enabled for this to work.
 |
 */
-$config['rewrite_short_tags'] = FALSE;
+$config['rewrite_short_tags'] = false;
 /*
 |--------------------------------------------------------------------------
 | Reverse Proxy IPs

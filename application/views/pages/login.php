@@ -4,14 +4,14 @@
 <title>KumpulIDE - <?= $title; ?></title>
 </head>
 <body>
-	<?= form_open("login"); ?>
+	<?= form_open("act/login"); ?>
 	<input type="text" name="username" placeholder="Username" >
 	<br>
 	<input type="text" name="email" placeholder="Email" >
 	<br>
 	<input type="password" name="password" placeholder="Password" >
 	<br>
-	<?= $captcha['image']; ?>
+	<img id="captcha"  src="data:image/<?= $captcha[0] ?>;base64,<?= $captcha[1] ?>"  alt="captcha image" >
 	<br>
 	<input type="text" name="captcha" placeholder="are you robot?" >
 	<br>

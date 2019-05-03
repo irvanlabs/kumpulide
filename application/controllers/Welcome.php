@@ -4,7 +4,7 @@ class Welcome extends MY_Controller
 {
     public function index()
     {
-        // $this->load->view('welcome_message');
-        echo clean_print($this->get_captcha());
+        $this->load->view('welcome_message');
+        //echo clean_print($this->get_captcha());
     }
 }
