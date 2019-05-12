@@ -17,5 +17,6 @@
 	<br>
 	<button type="submit" >👉 Login!</button>
 	<?= form_close(); ?>
+	<?= validation_errors(); ?>
 </body>
 </html>

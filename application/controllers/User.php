@@ -14,9 +14,7 @@ class User extends MY_Controller
             'ip_address'    => $this->input->ip_address(),
             'word'          => $captcha['word']
         ];
-
         $this->db->insert('captcha', $db);
-        
         $this->load->view("pages/login", $data);
     }
 }
